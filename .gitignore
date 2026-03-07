@@ -1,3 +1,8 @@
 .idea
 GEMINI.md
-PROGRESS.md
+**/.env
+**/plan.md
+**/dist
+**/node_modules
+**/.vscode
+**/.DS_Store

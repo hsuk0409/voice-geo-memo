@@ -1,0 +1,1 @@
+export const MEMO_REPOSITORY_PORT = Symbol('MEMO_REPOSITORY_PORT');
