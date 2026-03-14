@@ -22,6 +22,9 @@
 ### 3.1 도메인 모델 (`memo.model.ts`)
 - **역할**: 순수 비즈니스 로직. **외부 엔티티나 어댑터에 대한 의존성 없음.**
 - **특징**: 불변 객체(Immutable), 비즈니스 상태 변경 메서드만 포함.
+- **설계 결정 (Parameter Properties)**:
+  - TypeScript의 **Parameter Properties(문법적 설탕)** 기능을 활용하여 생성자 매개변수에서 직접 필드 선언, 정의, 할당(`public readonly`)을 처리합니다.
+  - 이 방식은 Boilerplate 코드를 획기적으로 줄여 도메인 모델의 핵심 구조를 한눈에 파악하기 쉽게 하며, 모든 필드에 `readonly`를 강제하여 데이터의 **불변성(Immutability)**을 명시적으로 보장합니다.
 
 ### 3.2 엔티티 모델 (`memo.entity.ts`)
 - **역할**: DB 테이블 매핑 전용. **도메인 모델에 대한 의존성 없음.**
@@ -125,3 +128,4 @@ export class MemoMapper {
 4. **검증**: `MemoService` 및 `MemoController`에 대한 단위 테스트를 작성하여 비즈니스 로직과 API 동작을 검증 완료했습니다. 모든 테스트 파일은 `src/memo/test/` 폴더에 통합 관리됩니다.
 
 *본 구현은 2026-03-07에 완료되었습니다.*
+

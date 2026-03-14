@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { SummaryPort } from '../../port/summary.port';
+import type { SummaryPort } from '../../port/summary.port';
 
 @Injectable()
 export class AiSummaryAdapter implements SummaryPort {

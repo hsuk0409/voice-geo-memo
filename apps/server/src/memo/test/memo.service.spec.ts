@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { MemoService } from '../domain/memo.service';
 import { MEMO_REPOSITORY_PORT } from '../port/memo-repository.token';
-import { MemoRepositoryPort } from '../port/memo-repository.port';
+import type { MemoRepositoryPort } from '../port/memo-repository.port';
 import { CreateMemoCommand } from '../port/create-memo.command';
 import { Memo } from '../domain/memo.model';
 

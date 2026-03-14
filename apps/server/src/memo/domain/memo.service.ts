@@ -1,11 +1,11 @@
 import { Injectable, Inject, NotFoundException } from '@nestjs/common';
 import { randomUUID } from 'crypto';
 import { CreateMemoCommand } from '../port/create-memo.command';
-import { MemoUseCase } from '../port/memo.usecase';
+import type { MemoUseCase } from '../port/memo.usecase';
 import { Memo } from './memo.model';
 import { MEMO_REPOSITORY_PORT } from '../port/memo-repository.token';
-import { MemoRepositoryPort } from '../port/memo-repository.port';
-import { SummaryPort } from '../port/summary.port';
+import type { MemoRepositoryPort } from '../port/memo-repository.port';
+import type { SummaryPort } from '../port/summary.port';
 import { DateUtils } from '../../common/util/date.util';
 
 @Injectable()

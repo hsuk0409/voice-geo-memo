@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { MemoRepositoryPort } from '../../port/memo-repository.port';
+import type { MemoRepositoryPort } from '../../port/memo-repository.port';
 import { Memo } from '../../domain/memo.model';
 import { MemoEntity } from './memo.entity';
 import { MemoMapper } from './memo.mapper';

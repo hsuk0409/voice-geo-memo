@@ -11,7 +11,7 @@ import {
   ParseIntPipe,
 } from '@nestjs/common';
 import { MEMO_USE_CASE } from '../../port/memo-usecase.token';
-import { MemoUseCase } from '../../port/memo.usecase';
+import type { MemoUseCase } from '../../port/memo.usecase';
 import { CreateMemoDto } from './dto/in/create-memo.dto';
 import { MemoResponseDto } from './dto/out/memo-response.dto';
 
